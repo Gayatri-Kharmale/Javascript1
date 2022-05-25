@@ -25,7 +25,7 @@
             let request = new XMLHttpRequest();
             request.open('GET', "https://jsonplaceholder.typicode.com/todos/");
             request.onload = function () {
-                if (request.status = 200) {  //200 is http status code
+                if (request.status = 200) {        //200 is http status code
                     resolve(request.response);
                 }
                 else {

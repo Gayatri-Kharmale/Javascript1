@@ -10,7 +10,7 @@
     <div id="d2"></div>
     
     <script>
-        function displaysuccess(data) {
+           function displaysuccess(data) {
             let info = JSON.parse(data);
             let text = "<div class='container'><table class='table=condensed table-bordered'><tr><th>UserId</th><th>Id</th><th>Title</th><th>Completed</th></tr>";
             for (let i =0;i<info.length;i++) {
@@ -42,7 +42,7 @@
             let resp = await promise;
             displaysuccess(resp);
         }
-       // getData();
+          // getData();
         
         
     </script>
