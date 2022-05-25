@@ -1,0 +1,38 @@
+<html>
+<head>
+
+</head>
+<body>
+    <!--//setTimeout-->
+    <p>message eill be displayed after 3 sce</p>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <script>
+        //function display() {
+        //    document.getElementById("d1").innerHTML = "hello all good morning";
+
+        //}
+        //setTimeout(display, 3000);
+
+        //-----------or---------------------
+
+        setTimeout(function () {
+            document.getElementById("d1").innerHTML = "hello all good morning";
+
+        }, 3000)
+
+
+
+
+        //----------------------------set interval------------------------
+
+        function showtime() {
+            let d = new Date();
+            let result = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+            document.getElementById("d2").innerHTML = result;
+
+        }
+        setInterval(showtime,1000);
+    </script>
+</body>
+</html>

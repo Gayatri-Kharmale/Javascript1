@@ -1,0 +1,104 @@
+<html>
+<head>
+
+</head>
+<body>
+    <div id="d1"></div>
+    <script>
+
+
+
+
+        //const student = {
+        //    id: 1,
+        //    name: "abc",
+        //    marks1: 67,
+        //    marks2: 47,
+        //    marks3: 77,
+        //    totalper: function () {
+        //        return ((this.marks1 + this.marks2 + this.marks3 )/ 300) * 100;
+        //    },
+        //    display: function () {
+        //        return " id: " + this.id + " name: " + this.name + " totalper: " + this.totalper();
+        //    }
+        //}
+        //document.getElementById("d1").innerHTML = student.display();
+       
+        //discountprice: function () {
+        //    return this.price - this.discountamount();
+        //}
+
+
+
+
+
+
+
+
+        //var emp={ };
+        //emp.id=1;
+        //emp.name = "user2";
+            
+        const employee = {     //apply,call
+        //    firstname: "user1",
+        //    lastname: "user",
+            firstname: "Test",//bind
+            lastname:"Test2",//bind
+           age: 30,     //ac
+            fullName: function (city, country) {     //ac
+                return this.firstname + " " + this.lastname;//bind//+" "+city+" "+country;
+            }//ac
+        }
+        const member = {//ac
+            firstname: "user1",//ac
+            lastname: "user",//ac
+        }
+        //bind
+        let empinfo = employee.fullName.bind(member);
+        document.getElementById("d1").innerHTML = empinfo();
+        //call
+        //document.getElementById("d1").innerHTML = employee.fullName.call(member,"pune","india");
+        //apply
+
+        document.getElementById("d1").innerHTML = employee.fullName.apply(member, ["mumbai", "india"]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //const product = {
+        //    id:1,
+        //    name: "mouse",
+        //    price: 899,
+        //    dicountamount: function () {
+        //        return this.price * 0.10;
+        //    },
+        //    discountprice: function () {
+        //        return this.price - this.discountamount();
+        //    }
+            //display: function () {
+            //    return this.id + " " + this.name + " " + this.price;
+            //}
+        //}
+       // document.getElementById("d1").innerHTML = "product details=" + product.dicountamount();
+       // document.getElementById("d1").innerHTML = product.display();
+        //document.getElementById("d1").innerHTML = product.price + "have discountn of" + product.dicountamount();
+        //document.getElementById("d1").innerHTML = employee.fullName();
+        //console.log(employee);
+        //console.log(employee.first + employee.lastname);
+        //console.log(product["name"] + product.price);
+        //document.getElementById("d1").innerHTML = object.values(employee);
+        //document.getElementById("d1"). innerHTML = JSON.stringify(employee);
+
+    </script>
+</body>
+</html>
+

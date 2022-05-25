@@ -1,0 +1,48 @@
+<html>
+<head>
+
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <script>
+        var color = ["red", "green", "blue"];
+        function display(data) {
+            var text = "<ul>";
+            for (let i = 0; i < data.length; i++) {
+                text += "<li>" + data[i] + "</li>";
+            }
+            text += "</ul>"
+            document.getElementById("d1").innerHTML = text;
+
+        }
+        //function display(data) {
+        //    document.getElementById("d1").innerHTML = data;
+
+        //}
+        function displayerror(data) {
+            document.getElementById("d2").innerHTML = data;
+
+        }
+        var promise=new Promise(function(resolve,reject) {
+//can write to get data from server /db..
+            //let x = 11;
+            if (color != null) {//if (x == 10) {
+                resolve(color);
+            }
+            else{
+                reject("error in the code");
+            }
+        });
+
+        promise.then(function (value) {
+            display(value);
+            //}, function (error) {
+            //    displayerror(error);
+            //});
+        }).catch(function (error) {
+            displayerror(error);
+        });
+    </script>
+</body>
+</html>
